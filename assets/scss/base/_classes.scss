@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+@each $margin, $numbs in $margins {
+  @if $margin == m {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin: #{$value};
+      }
+    }
+  } @else if $margin == mt {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-top: #{$value};
+      }
+    }
+  } @else if $margin == mr {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-right: #{$value};
+      }
+    }
+  } @else if $margin == mb {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-bottom: #{$value};
+      }
+    }
+  } @else if $margin == ml {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-left: #{$value};
+      }
+    }
+  } @else if $margin == mx {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-left: #{$value};
+        margin-right: #{$value};
+      }
+    }
+  } @else if $margin == my {
+    @each $numb, $value in $numbs {
+      .#{$margin}-#{$numb} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+      }
+    }
+  }
+}
+
+@each $padding, $numbs in $paddings {
+  @if $padding == p {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding: #{$value};
+      }
+    }
+  } @else if $padding == pt {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-top: #{$value};
+      }
+    }
+  } @else if $padding == pr {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-right: #{$value};
+      }
+    }
+  } @else if $padding == pb {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-bottom: #{$value};
+      }
+    }
+  } @else if $padding == pl {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-left: #{$value};
+      }
+    }
+  } @else if $padding == px {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-left: #{$value};
+        padding-right: #{$value};
+      }
+    }
+  } @else if $padding == py {
+    @each $numb, $value in $numbs {
+      .#{$padding}-#{$numb} {
+        padding-top: #{$value};
+        padding-bottom: #{$value};
+      }
+    }
+  }
+}
+
+@each $bg, $value in $colors {
+  .bg-#{$bg} {
+    background-color: #{$value};
+  }
+}
